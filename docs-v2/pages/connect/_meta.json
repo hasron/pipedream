@@ -10,5 +10,23 @@
   },
   "api": {
     "title": "API & SDK Reference"
+  },
+  "tokens": {
+    "title": "Connect tokens"
+  },
+  "environments": {
+    "title": "Environments"
+  },
+  "oauth-clients": {
+    "title": "OAuth Clients"
+  },
+  "webhooks": {
+    "title": "Webhooks"
+  },
+  "connect-link": {
+    "title": "Connect Link"
+  },
+  "migrating-from-project-keys-to-oauth": {
+    "display": "hidden"
   }
 }
