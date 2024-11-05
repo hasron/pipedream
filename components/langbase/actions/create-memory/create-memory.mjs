@@ -11,14 +11,14 @@ export default {
     name: {
       propDefinition: [
         app,
-        "name"
-      ]
+        "name",
+      ],
     },
     description: {
       propDefinition: [
         app,
-        "description"
-      ]
+        "description",
+      ],
     },
   },
 
@@ -27,12 +27,12 @@ export default {
       $,
       data: {
         name: this.name,
-        description: this.description
-      }
+        description: this.description,
+      },
     });
-    
+
     $.export("$summary", `Successfully created memory ${this.name}`);
-    
+
     return response;
   },
 };

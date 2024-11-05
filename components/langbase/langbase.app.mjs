@@ -11,11 +11,13 @@ export default {
       async options() {
         const response = await this.listMemories();
         const memoryNames = response.memorySets;
-        return memoryNames.map(({ name, description }) => ({
+        return memoryNames.map(({
+          name, description,
+        }) => ({
           label: description,
           value: name,
         }));
-      }
+      },
     },
     name: {
       type: "string",
@@ -44,8 +46,8 @@ export default {
         url: this._baseUrl() + path,
         headers: {
           ...headers,
-          Authorization: `Bearer ${this.$auth.org_api_key}`,
-          "Accept": `application/json`,
+          "Authorization": `Bearer ${this.$auth.org_api_key}`,
+          "Accept": "application/json",
         },
       });
     },
@@ -56,7 +58,9 @@ export default {
         ...args,
       });
     },
-    async deleteMemory({ memoryName, ...args }) {
+    async deleteMemory({
+      memoryName, ...args
+    }) {
       return this._makeRequest({
         path: `/memorysets/sergio19733/${memoryName}`,
         method: "delete",
